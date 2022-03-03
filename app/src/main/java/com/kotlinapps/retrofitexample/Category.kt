@@ -1,7 +1,9 @@
 package com.kotlinapps.retrofitexample
 
 data class Category(
+    var albumId: Int,
     var id: Int,
-    var name: String,
-    var icon: String
+    var title: String,
+    var url: String,
+    var thumbnailUrl: String
 )

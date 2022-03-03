@@ -16,14 +16,14 @@ class CategoryRecyclerView(val context: Context) :
     private var categoryList: List<Category> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.movie_items, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_items, parent, false)
         return MyViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val movieItem = categoryList[position]
-        holder.txtMovie.text = movieItem.name
-        Picasso.get().load(movieItem.icon).into(holder.imgMovie)
+        holder.titleTxt.text = movieItem.title
+        Picasso.get().load(movieItem.url).into(holder.imgUrl)
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +39,7 @@ class CategoryRecyclerView(val context: Context) :
 
     //ViewHolder
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgMovie: ImageView = itemView.findViewById(R.id.imgMovie)
-        val txtMovie: TextView = itemView.findViewById(R.id.txtMovie)
+        val imgUrl: ImageView = itemView.findViewById(R.id.img)
+        val titleTxt: TextView = itemView.findViewById(R.id.title)
     }
 }

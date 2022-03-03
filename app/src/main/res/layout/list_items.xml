@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_gravity="center"
     android:layout_margin="4dp"
     android:elevation="20dp"
@@ -15,23 +16,23 @@
         android:padding="15dp">
 
         <ImageView
-            android:id="@+id/imgMovie"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:id="@+id/img"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/me" />
+            android:src="@mipmap/ic_launcher"/>
 
         <TextView
-            android:id="@+id/txtMovie"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:text="Movie Name"
+            android:text="Title"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>

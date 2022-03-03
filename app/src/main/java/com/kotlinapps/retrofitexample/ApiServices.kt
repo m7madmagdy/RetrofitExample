@@ -6,11 +6,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 interface ApiServices {
-    @GET("categories")
+    @GET("photos")
     fun getMovie(): Call<List<Category>>
 
     companion object {
-        val BASE_URL = "https://aghour-services-backend.herokuapp.com/api/"
+        val BASE_URL = "https://jsonplaceholder.typicode.com/"
         fun create(): ApiServices {
             val retrofitBuilder = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
