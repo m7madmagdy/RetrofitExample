@@ -1,12 +1,12 @@
 package com.kotlinapps.retrofitexample
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
@@ -18,13 +18,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     lateinit var categoryRecyclerView: CategoryRecyclerView
     lateinit var progressBar: ProgressBar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         recyclerView = findViewById(R.id.recyclerView)
         categoryRecyclerView = CategoryRecyclerView(this)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = categoryRecyclerView
         progressBar = findViewById(R.id.progressBar)
 
@@ -34,7 +35,6 @@ class MainActivity : AppCompatActivity() {
                 call: Call<List<Category>>,
                 response: Response<List<Category>>
             ) {
-
                 if (response.body() != null) {
                     progressBar.visibility = View.GONE
                     recyclerView.visibility = View.VISIBLE
@@ -50,16 +50,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onSNACK(view: View) {
-        val snackbar = Snackbar.make(
-            view, "Not Internet Connection",10000
-        ).setAction("OK", null)
-        snackbar.setActionTextColor(Color.WHITE)
+        val snackbar = Snackbar.make(view, "No Internet Connection", 10000)
         val snackbarView = snackbar.view
         snackbarView.setBackgroundColor(Color.BLACK)
         val textView =
             snackbarView.findViewById(com.google.android.material.R.id.snackbar_text) as TextView
         textView.setTextColor(Color.WHITE)
-        textView.textSize = 16f
+        textView.textSize = 18f
         snackbar.show()
     }
 }

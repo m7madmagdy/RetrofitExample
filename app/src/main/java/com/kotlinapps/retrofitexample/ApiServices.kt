@@ -10,13 +10,12 @@ interface ApiServices {
     fun getMovie(): Call<List<Category>>
 
     companion object {
-        val BASE_URL = "https://jsonplaceholder.typicode.com/"
+        private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
         fun create(): ApiServices {
             val retrofitBuilder = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL)
                 .build()
-
             return retrofitBuilder.create(ApiServices::class.java)
         }
     }
