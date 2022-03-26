@@ -4,7 +4,7 @@
 [![Gradle](https://img.shields.io/badge/gradle-7.1.2-blue.svg)](https://lv.binarybabel.org/catalog/gradle/latest)
 [![API](https://img.shields.io/badge/API-21%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=21)
 
-<img src="https://m7madmagdy.github.io/pages/ajhour.jpg" width="250" align="right" hspace="20">
+<img src="https://tinyurl.com/yayzhws4" width="250" align="right" hspace="20">
 
 Aghour Services App is a sample project that presents all services in this village such as Doctors,pharmacy, Restaurant...etc.
 
@@ -12,14 +12,15 @@ The goal of the project is to demonstrate best practices, provide a set of guide
 
 | Mode  | Character list                                                          | Characters favorite                                                          | Character detail                                                          |
 |-------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| Light | <img src="screenshots/phone/light_mode_characters_list.png" width="250"> | <img src="screenshots/phone/light_mode_characters_favorite.png" width="250"> | <img src="screenshots/phone/light_mode_character_detail.png" width="250"> |
-| Dark  | <img src="screenshots/phone/dark_mode_characters_list.png" width="250">  | <img src="screenshots/phone/dark_mode_characters_favorite.png" width="250">  | <img src="screenshots/phone/dark_mode_character_detail.png" width="250">  |
+| Light | <img src="https://tinyurl.com/yayzhws4" width="250"> | <img src="https://tinyurl.com/yayzhws4" width="250"> | 
+<img src="https://tinyurl.com/yayzhws4" width="250"> |
+| Dark  | <img src="https://tinyurl.com/yayzhws4" width="250">  | <img src="https://tinyurl.com/yayzhws4" width="250">  | <img src="https://tinyurl.com/yayzhws4" width="250">  |
 
 ## Architecture
 
 The architecture of the application is based, apply and strictly complies with each of the following 5 points:
 
-<img src="screenshots/architecture/project_structure.png" width="300" align="right" hspace="20">
+<img src="https://tinyurl.com/yayzhws4" width="300" align="right" hspace="20">
 
 -   A single-activity architecture, using the [Navigation component](https://developer.android.com/guide/navigation/navigation-getting-started) to manage fragment operations.
 -   [Android architecture components](https://developer.android.com/topic/libraries/architecture/), part of Android Jetpack for give to project a robust design, testable and maintainable.
