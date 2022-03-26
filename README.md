@@ -1,12 +1,10 @@
-# Retrofit_Example
-# aghour-services
-## Kotlin Sample App
+# aghour-services-App
 
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.6.10-blue.svg)](http://kotlinlang.org/)
 [![Gradle](https://img.shields.io/badge/gradle-7.1.2-blue.svg)](https://lv.binarybabel.org/catalog/gradle/latest)
 [![API](https://img.shields.io/badge/API-21%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=21)
 
-<img src="screenshots/demo/demo.gif" width="250" align="right" hspace="20">
+<img src="https://m7madmagdy.github.io/pages/ajhour.jpg" width="250" align="right" hspace="20">
 
 Kotlin Sample App is a sample project that presents modern, 2019 approach to [Android](https://www.android.com/) application development using [Kotlin](https://kotlinlang.org/) and latest tech-stack.
 
