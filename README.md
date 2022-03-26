@@ -6,15 +6,11 @@
 
 <img src="https://m7madmagdy.github.io/pages/ajhour.jpg" width="250" align="right" hspace="20">
 
-Kotlin Sample App is a sample project that presents modern, 2019 approach to [Android](https://www.android.com/) application development using [Kotlin](https://kotlinlang.org/) and latest tech-stack.
+Aghour Services App is a sample project that presents all services in this village such as Doctors,pharmacy, Restaurant...etc.
 
 The goal of the project is to demonstrate best practices, provide a set of guidelines, and present modern Android
-application architecture that is modular, scalable, maintainable and testable. This application may look simple, but it
-has all of these small details that will set the rock-solid foundation of the larger app suitable for bigger teams and
-long application lifecycle management.
 
 ## Table of Contents
-
 -   [Development](https://github.com/VMadalin/kotlin-sample-app#development)
 -   [Design](https://github.com/VMadalin/kotlin-sample-app#design)
 -   [Architecture](https://github.com/VMadalin/kotlin-sample-app#architecture)
