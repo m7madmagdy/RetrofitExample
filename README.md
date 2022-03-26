@@ -10,6 +10,7 @@ Aghour Services App is a sample project that presents all services in this villa
 
 The goal of the project is to demonstrate best practices, provide a set of guidelines, and present modern Android
 
+
 | Mode  | Character list                                                          | Characters favorite                                                          | Character detail                                                          |
 |-------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | Light | <img src="https://tinyurl.com/yayzhws4" width="250"> | <img src="https://tinyurl.com/yayzhws4" width="250"> | 
