@@ -5,16 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="4dp"
-    android:elevation="20dp"
-    app:cardCornerRadius="6dp">
+    app:cardCornerRadius="6dp"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:id="@+id/linearItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="4dp">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/img"
@@ -23,8 +21,8 @@
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_launcher_foreground" />
 
         <TextView
             android:id="@+id/Id"
@@ -34,8 +32,8 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:text="Title"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:text="Title" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

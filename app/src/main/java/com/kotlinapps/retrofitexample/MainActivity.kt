@@ -7,7 +7,6 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
@@ -16,20 +15,19 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
-    lateinit var categoryRecyclerView: CategoryRecyclerView
-    lateinit var progressBar: ProgressBar
+    private lateinit var categoryRecyclerAdapter: Adapter
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupView()
+        retrofit()
+    }
 
-        recyclerView = findViewById(R.id.recyclerView)
-        categoryRecyclerView = CategoryRecyclerView(this)
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
-        recyclerView.adapter = categoryRecyclerView
-        progressBar = findViewById(R.id.progressBar)
-
+    private fun retrofit() {
         val apiServices = ApiServices.create().getMovie()
+
         apiServices.enqueue(object : Callback<List<Category>> {
             override fun onResponse(
                 call: Call<List<Category>>,
@@ -38,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 if (response.body() != null) {
                     progressBar.visibility = View.GONE
                     recyclerView.visibility = View.VISIBLE
-                    categoryRecyclerView.setMovieListItems(response.body()!!)
+                    categoryRecyclerAdapter.setMovieListItems(response.body()!!)
                 }
             }
 
@@ -49,14 +47,22 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    private fun setupView() {
+        recyclerView = findViewById(R.id.recyclerView)
+        progressBar = findViewById(R.id.progressBar)
+        categoryRecyclerAdapter = Adapter()
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        recyclerView.adapter = categoryRecyclerAdapter
+    }
+
     fun onSNACK(view: View) {
-        val snackbar = Snackbar.make(view, "No Internet Connection", 10000)
+        val snackbar = Snackbar.make(view, "No Internet Connection", 200000)
         val snackbarView = snackbar.view
         snackbarView.setBackgroundColor(Color.BLACK)
         val textView =
             snackbarView.findViewById(com.google.android.material.R.id.snackbar_text) as TextView
         textView.setTextColor(Color.WHITE)
-        textView.textSize = 18f
+        textView.textSize = 18F
         snackbar.show()
     }
 }
